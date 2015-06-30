@@ -1,0 +1,11 @@
+<%= @post.title %>
+
+
+<% if @comments.any? %>
+
+<%= @comments.body %>
+
+
+<% else %>
+  <p>Please add the first comment!</p>
+<% end %>
