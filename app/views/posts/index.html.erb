@@ -1,11 +1,11 @@
 <h1>Posts</h1>
 
-
+<span><%= link_to "Add post", new_post_path %></span>
 
 <% @posts.each do |post| %>
 
   <ul>
-    <li><%= link_to post.title, post_path(post) %></li>
+    <li><%= link_to post.title, post_path(post) %> <%= link_to "Edit", edit_post_path(post.id) %>|<%= link_to "Delete",      post_path(post.id), :data => {:confirm => "are you really really sure?", :method => "delete"} %></li>
   </ul>
 
 <% end %>
