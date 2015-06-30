@@ -1,5 +1,9 @@
 <h3>Add a new post</h3>
 
-<%= link_to "Posts", posts_path %>
+
 
 <%= render "form" %>
+
+<hr>
+
+<%= button_to "Back to Posts", posts_path, method: "get" %>
